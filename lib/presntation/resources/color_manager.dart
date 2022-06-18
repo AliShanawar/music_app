@@ -10,6 +10,7 @@ class ColorManager {
   static Color lightGrey = HexColor.fromHex("#C5C5C5");
   static Color purple = HexColor.fromHex("#8146CD");
   static Color yellow = HexColor.fromHex("#FFE81A");
+  static Color background = HexColor.fromHex("#03091F");
 }
 
 extension HexColor on Color {

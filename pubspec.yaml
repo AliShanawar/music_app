@@ -64,6 +64,12 @@ flutter:
     - assets/images/Vector.png
     - assets/images/drawer_background.png
     - assets/images/logo.png
+    - assets/images/dummy.png
+    - assets/images/home.png
+    - assets/images/Fill.png
+    - assets/images/heart.png
+    - assets/images/profile.png
+
     
   
 

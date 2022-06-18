@@ -9,4 +9,6 @@ class ImageAssets {
   static const String logout = "$IMAGE_PATH/logout.png";
   static const String drawer_background = "$IMAGE_PATH/drawer_background.png";
   static const String logo = "$IMAGE_PATH/logo.png";
+  static const String creator = "$IMAGE_PATH/creator.png";
+  static const String heart = "$IMAGE_PATH/heart.png";
 }

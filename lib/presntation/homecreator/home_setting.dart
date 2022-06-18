@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:music_app/presntation/resources/color_manager.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purple.shade700,
+      backgroundColor: ColorManager.background,
       appBar: PreferredSize(
         preferredSize: Size(double.infinity, 240),
         child: Container(
@@ -31,7 +32,7 @@ class _HomePageState extends State<HomePage> {
                     width: 50,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
-                        color: Colors.purple),
+                        color: ColorManager.shadeBlue2),
                     child: IconButton(
                         onPressed: () {},
                         icon: Icon(
@@ -71,7 +72,7 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(color: Colors.white, fontSize: 22),
                 ),
                 Text(
-                  'asjads',
+                  'John Deo',
                   style: TextStyle(color: Colors.grey, fontSize: 14),
                 ),
                 SizedBox(
@@ -79,7 +80,7 @@ class _HomePageState extends State<HomePage> {
                   width: double.infinity,
                   child: ListView.builder(
                     shrinkWrap: true,
-                    itemCount: 1,
+                    itemCount: 3,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (BuildContext context, int index) {
                       return Row(
@@ -95,8 +96,8 @@ class _HomePageState extends State<HomePage> {
                               width: 100,
                               decoration: BoxDecoration(
                                   color: isSelected
-                                      ? Colors.purple.shade700
-                                      : Colors.white,
+                                      ? ColorManager.purple
+                                      : ColorManager.shadeBlue2,
                                   borderRadius: BorderRadius.circular(12)),
                               child: Center(
                                 child: Row(
@@ -129,8 +130,8 @@ class _HomePageState extends State<HomePage> {
                               width: 100,
                               decoration: BoxDecoration(
                                   color: isSelected
-                                      ? Colors.purple.shade700
-                                      : Colors.white,
+                                      ? ColorManager.purple
+                                      : ColorManager.shadeBlue2,
                                   borderRadius: BorderRadius.circular(12)),
                               child: Center(
                                 child: Row(
@@ -172,11 +173,11 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Text(
                     'Clubs',
-                    style: TextStyle(fontSize: 22, color: Colors.white),
+                    style: TextStyle(fontSize: 22, color: ColorManager.white),
                   ),
                   Text(
                     'View all',
-                    style: TextStyle(fontSize: 16, color: Colors.purpleAccent),
+                    style: TextStyle(fontSize: 16, color: ColorManager.purple),
                   ),
                 ],
               ),
@@ -195,7 +196,7 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                              color: Colors.black,
+                              color: ColorManager.shadeBlue2,
                               borderRadius: BorderRadius.circular(12)),
                           child: Padding(
                             padding: EdgeInsets.all(8),
@@ -204,8 +205,7 @@ class _HomePageState extends State<HomePage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Image(
-                                  fit: BoxFit.cover,
-                                  image: AssetImage('assets/images/coffe.png'),
+                                  image: AssetImage('assets/images/dummy.png'),
                                   height: 80,
                                   width: 140,
                                 ),
@@ -215,7 +215,7 @@ class _HomePageState extends State<HomePage> {
                                 Padding(
                                   padding: const EdgeInsets.all(4.0),
                                   child: Text(
-                                    'Party',
+                                    'Party neon',
                                     style: TextStyle(
                                         fontSize: 22, color: Colors.white),
                                   ),
@@ -223,7 +223,7 @@ class _HomePageState extends State<HomePage> {
                                 Padding(
                                   padding: const EdgeInsets.all(4.0),
                                   child: Text(
-                                    'asdjkl',
+                                    'San Francisco',
                                     style: TextStyle(
                                         fontSize: 16, color: Colors.grey),
                                   ),
@@ -245,11 +245,11 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Text(
                     'Djs',
-                    style: TextStyle(fontSize: 22, color: Colors.white),
+                    style: TextStyle(fontSize: 22, color: ColorManager.white),
                   ),
                   Text(
                     'View all',
-                    style: TextStyle(fontSize: 16, color: Colors.purpleAccent),
+                    style: TextStyle(fontSize: 16, color: ColorManager.purple),
                   ),
                 ],
               ),
@@ -268,7 +268,7 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                              color: Colors.black,
+                              color: ColorManager.shadeBlue2,
                               borderRadius: BorderRadius.circular(12)),
                           child: Padding(
                             padding: EdgeInsets.all(8),
@@ -279,7 +279,7 @@ class _HomePageState extends State<HomePage> {
                               children: [
                                 Image(
                                   fit: BoxFit.cover,
-                                  image: AssetImage('image/hexa.png'),
+                                  image: AssetImage('assets/images/dummy.png'),
                                   height: 80,
                                   width: 140,
                                 ),
@@ -289,7 +289,7 @@ class _HomePageState extends State<HomePage> {
                                 Padding(
                                   padding: const EdgeInsets.all(4.0),
                                   child: Text(
-                                    'Party',
+                                    'Party neon',
                                     style: TextStyle(
                                         fontSize: 22, color: Colors.white),
                                   ),
@@ -297,7 +297,7 @@ class _HomePageState extends State<HomePage> {
                                 Padding(
                                   padding: const EdgeInsets.all(4.0),
                                   child: Text(
-                                    'asdjkl',
+                                    'San Francisco',
                                     style: TextStyle(
                                         fontSize: 16, color: Colors.grey),
                                   ),
@@ -319,12 +319,12 @@ class _HomePageState extends State<HomePage> {
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   Text(
-                    'Djs',
-                    style: TextStyle(fontSize: 22, color: Colors.white),
+                    'Drinks',
+                    style: TextStyle(fontSize: 22, color: ColorManager.white),
                   ),
                   Text(
                     'View all',
-                    style: TextStyle(fontSize: 16, color: Colors.purpleAccent),
+                    style: TextStyle(fontSize: 16, color: ColorManager.purple),
                   ),
                 ],
               ),
@@ -343,7 +343,7 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                              color: Colors.black,
+                              color: ColorManager.shadeBlue2,
                               borderRadius: BorderRadius.circular(12)),
                           child: Padding(
                             padding: EdgeInsets.all(8),
@@ -353,7 +353,7 @@ class _HomePageState extends State<HomePage> {
                               children: [
                                 Image(
                                   fit: BoxFit.cover,
-                                  image: AssetImage('image/hexa.png'),
+                                  image: AssetImage('assets/images/dummy.png'),
                                   height: 80,
                                   width: 140,
                                 ),
@@ -363,7 +363,7 @@ class _HomePageState extends State<HomePage> {
                                 Padding(
                                   padding: const EdgeInsets.all(4.0),
                                   child: Text(
-                                    'Party',
+                                    'Party neon',
                                     style: TextStyle(
                                         fontSize: 22, color: Colors.white),
                                   ),
@@ -371,7 +371,7 @@ class _HomePageState extends State<HomePage> {
                                 Padding(
                                   padding: const EdgeInsets.all(4.0),
                                   child: Text(
-                                    'asdjkl',
+                                    'San Francisco',
                                     style: TextStyle(
                                         fontSize: 16, color: Colors.grey),
                                   ),

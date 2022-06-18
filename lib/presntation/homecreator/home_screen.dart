@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/presntation/homecreator/home_setting.dart';
+import 'package:music_app/presntation/resources/color_manager.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +13,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
       home: MyHomePage(),
     );
   }
@@ -42,7 +41,6 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             CustomPaint(
               size: Size(50, (50 * 1).toDouble()),
-              //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
               painter: RPSCustomPainter(),
             ),
             Positioned(
@@ -64,61 +62,71 @@ class _MyHomePageState extends State<MyHomePage> {
 
   buildNavBar(BuildContext context) {
     return BottomAppBar(
-      color: Colors.purple.shade700,
+      color: ColorManager.shadeBlue2,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Expanded(
-            child: IconButton(
-              enableFeedback: false,
-              icon: Icon(
-                Icons.home,
-                color: seletedPage == 0 ? Colors.red : Colors.black,
+            child: InkWell(
+              child: Image(
+                height: 40,
+                image: AssetImage(
+                  'assets/images/home.png',
+                ),
+                color:
+                    seletedPage == 0 ? ColorManager.white : ColorManager.white,
               ),
-              onPressed: () {
+              onTap: () {
                 setState(() {
                   seletedPage = 0;
                 });
               },
             ),
           ),
-          Expanded(
-            child: IconButton(
-              enableFeedback: false,
-              icon: Icon(
-                Icons.show_chart,
-                color: seletedPage == 1 ? Colors.red : Colors.black,
+          InkWell(
+            child: Expanded(
+              child: Image(
+                height: 40,
+                image: AssetImage(
+                  'assets/images/Fill.png',
+                ),
+                color:
+                    seletedPage == 1 ? ColorManager.white : ColorManager.white,
               ),
-              onPressed: () {
-                setState(() {
-                  seletedPage = 1;
-                });
-              },
             ),
+            onTap: () {
+              setState(() {
+                seletedPage = 1;
+              });
+            },
           ),
           Expanded(child: Text('')),
           Expanded(
-            child: IconButton(
-              enableFeedback: false,
-              icon: Icon(
-                Icons.tab,
-                color: seletedPage == 2 ? Colors.red : Colors.black,
+              child: InkWell(
+            child: Image(
+              height: 40,
+              image: AssetImage(
+                'assets/images/heart.png',
               ),
-              onPressed: () {
-                setState(() {
-                  seletedPage = 2;
-                });
-              },
+              color: seletedPage == 2 ? ColorManager.white : ColorManager.white,
             ),
-          ),
+            onTap: () {
+              setState(() {
+                seletedPage = 2;
+              });
+            },
+          )),
           Expanded(
-            child: IconButton(
-              enableFeedback: false,
-              icon: Icon(
-                Icons.settings,
-                color: seletedPage == 3 ? Colors.red : Colors.black,
+            child: InkWell(
+              child: Image(
+                height: 30,
+                image: AssetImage(
+                  'assets/images/profile.png',
+                ),
+                color:
+                    seletedPage == 3 ? ColorManager.white : ColorManager.white,
               ),
-              onPressed: () {
+              onTap: () {
                 setState(() {
                   seletedPage = 3;
                 });
@@ -131,9 +139,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-//Add this CustomPaint widget to the Widget Tree
-
-//Copy this CustomPainter code to the Bottom of the File
 class RPSCustomPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
