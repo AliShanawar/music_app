@@ -205,7 +205,7 @@ class _HomePageState extends State<HomePage> {
                 height: 10,
               ),
               SizedBox(
-                height: 180,
+                height: 220,
                 width: double.infinity,
                 child: ListView.builder(
                   shrinkWrap: true,
@@ -219,30 +219,63 @@ class _HomePageState extends State<HomePage> {
                               color: ColorManager.shadeBlue2,
                               borderRadius: BorderRadius.circular(12)),
                           child: Padding(
-                            padding: EdgeInsets.all(8),
+                            padding: EdgeInsets.all(0),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              // ignore: prefer_const_literals_to_create_immutables
                               children: [
-                                Image(
-                                  fit: BoxFit.cover,
-                                  image: AssetImage('assets/images/dummy.png'),
-                                  height: 80,
-                                  width: 140,
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
                                 Padding(
-                                  padding: const EdgeInsets.all(4.0),
-                                  child: Text(
-                                    'Party neon',
-                                    style: TextStyle(
-                                        fontSize: 22, color: Colors.white),
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Image(
+                                    fit: BoxFit.cover,
+                                    image:
+                                        AssetImage('assets/images/dummy_2.png'),
+                                    height: 100,
+                                    width: 165,
                                   ),
                                 ),
+                                Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 8),
+                                      child: Text(
+                                        'Party neon',
+                                        style: TextStyle(
+                                            fontSize: 22, color: Colors.white),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 16, right: 8),
+                                      // child: Container(
+                                      //   decoration: BoxDecoration(
+                                      //     color: ColorManager.datecolor,
+                                      //     borderRadius:
+                                      //         BorderRadius.circular(11),
+                                      //   ),
+                                      //   child: Center(
+                                      //     child: Column(
+                                      //       children: [
+                                      //         IconButton(
+                                      //           icon: Icon(
+                                      //             Icons.shopping_cart,
+                                      //             color: Colors.white,
+                                      //           ),
+                                      //           onPressed: () {},
+                                      //         ),
+                                      //       ],
+                                      //     ),
+                                      //   ),
+                                      // ),
+                                    ),
+                                  ],
+                                ),
                                 Padding(
-                                  padding: const EdgeInsets.all(4.0),
+                                  padding: const EdgeInsets.only(left: 8),
                                   child: Text(
                                     'San Francisco',
                                     style: TextStyle(
@@ -278,7 +311,7 @@ class _HomePageState extends State<HomePage> {
                 height: 10,
               ),
               SizedBox(
-                height: 180,
+                height: 220,
                 width: double.infinity,
                 child: ListView.builder(
                   shrinkWrap: true,
@@ -292,32 +325,63 @@ class _HomePageState extends State<HomePage> {
                               color: ColorManager.shadeBlue2,
                               borderRadius: BorderRadius.circular(12)),
                           child: Padding(
-                            padding: EdgeInsets.all(8),
+                            padding: EdgeInsets.all(0),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               // ignore: prefer_const_literals_to_create_immutables
                               children: [
-                                Image(
-                                  fit: BoxFit.cover,
-                                  image:
-                                      AssetImage('assets/images/dummy_2.png'),
-                                  height: 80,
-                                  width: 140,
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
                                 Padding(
-                                  padding: const EdgeInsets.all(4.0),
-                                  child: Text(
-                                    'Party neon',
-                                    style: TextStyle(
-                                        fontSize: 22, color: Colors.white),
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Image(
+                                    fit: BoxFit.cover,
+                                    image:
+                                        AssetImage('assets/images/dummy_2.png'),
+                                    height: 100,
+                                    width: 165,
                                   ),
                                 ),
+                                Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 8),
+                                      child: Text(
+                                        'Party neon',
+                                        style: TextStyle(
+                                            fontSize: 22, color: Colors.white),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 16, right: 8),
+                                      // child: Container(
+                                      //   decoration: BoxDecoration(
+                                      //     color: ColorManager.datecolor,
+                                      //     borderRadius:
+                                      //         BorderRadius.circular(11),
+                                      //   ),
+                                      //   child: Center(
+                                      //     child: Column(
+                                      //       children: [
+                                      //         IconButton(
+                                      //           icon: Icon(
+                                      //             Icons.shopping_cart,
+                                      //             color: Colors.white,
+                                      //           ),
+                                      //           onPressed: () {},
+                                      //         ),
+                                      //       ],
+                                      //     ),
+                                      //   ),
+                                      // ),
+                                    ),
+                                  ],
+                                ),
                                 Padding(
-                                  padding: const EdgeInsets.all(4.0),
+                                  padding: const EdgeInsets.only(left: 8),
                                   child: Text(
                                     'San Francisco',
                                     style: TextStyle(
@@ -354,7 +418,7 @@ class _HomePageState extends State<HomePage> {
                 height: 10,
               ),
               SizedBox(
-                height: 180,
+                height: 220,
                 width: double.infinity,
                 child: ListView.builder(
                   shrinkWrap: true,
@@ -368,31 +432,63 @@ class _HomePageState extends State<HomePage> {
                               color: ColorManager.shadeBlue2,
                               borderRadius: BorderRadius.circular(12)),
                           child: Padding(
-                            padding: EdgeInsets.all(8),
+                            padding: EdgeInsets.all(0),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              // ignore: prefer_const_literals_to_create_immutables
                               children: [
-                                Image(
-                                  fit: BoxFit.cover,
-                                  image:
-                                      AssetImage('assets/images/dummy_3.png'),
-                                  height: 80,
-                                  width: 140,
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
                                 Padding(
-                                  padding: const EdgeInsets.all(4.0),
-                                  child: Text(
-                                    'Party neon',
-                                    style: TextStyle(
-                                        fontSize: 22, color: Colors.white),
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Image(
+                                    fit: BoxFit.cover,
+                                    image:
+                                        AssetImage('assets/images/dummy_2.png'),
+                                    height: 100,
+                                    width: 165,
                                   ),
                                 ),
+                                Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 8),
+                                      child: Text(
+                                        'Party neon',
+                                        style: TextStyle(
+                                            fontSize: 22, color: Colors.white),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 16, right: 8),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: ColorManager.datecolor,
+                                          borderRadius:
+                                              BorderRadius.circular(11),
+                                        ),
+                                        child: Center(
+                                          child: Column(
+                                            children: [
+                                              IconButton(
+                                                icon: Icon(
+                                                  Icons.shopping_cart,
+                                                  color: Colors.white,
+                                                ),
+                                                onPressed: () {},
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                                 Padding(
-                                  padding: const EdgeInsets.all(4.0),
+                                  padding: const EdgeInsets.only(left: 8),
                                   child: Text(
                                     'San Francisco',
                                     style: TextStyle(
@@ -405,7 +501,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         SizedBox(
                           width: 10,
-                        )
+                        ),
                       ],
                     );
                   },

@@ -253,7 +253,7 @@ class _HomeUserScreenState extends State<HomeUserScreen> {
                                       Image(
                                         fit: BoxFit.cover,
                                         image: AssetImage(
-                                            'assets/images/star.png'),
+                                            'assets/images/Star.png'),
                                       ),
                                     ],
                                   ),

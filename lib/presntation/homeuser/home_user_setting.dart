@@ -51,7 +51,7 @@ class _HomeUserSettingState extends State<HomeUserSetting> {
     return BottomAppBar(
       color: ColorManager.shadeBlue2,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Expanded(
             child: InkWell(
