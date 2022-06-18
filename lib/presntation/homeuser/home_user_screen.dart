@@ -1,17 +1,15 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 import 'package:music_app/presntation/drawer/drawer.dart';
 import 'package:music_app/presntation/resources/color_manager.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomeUserScreen extends StatefulWidget {
+  HomeUserScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomeUserScreen> createState() => _HomeUserScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomeUserScreenState extends State<HomeUserScreen> {
   final GlobalKey<ScaffoldState> drawerKey = new GlobalKey<ScaffoldState>();
   bool isSelected = false;
 
@@ -205,7 +203,7 @@ class _HomePageState extends State<HomePage> {
                 height: 10,
               ),
               SizedBox(
-                height: 180,
+                height: 220,
                 width: double.infinity,
                 child: ListView.builder(
                   shrinkWrap: true,
@@ -221,14 +219,13 @@ class _HomePageState extends State<HomePage> {
                           child: Padding(
                             padding: EdgeInsets.all(8),
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Image(
                                   fit: BoxFit.cover,
-                                  image: AssetImage('assets/images/dummy.png'),
-                                  height: 80,
-                                  width: 140,
+                                  image:
+                                      AssetImage('assets/images/round_1.png'),
                                 ),
                                 SizedBox(
                                   height: 10,
@@ -238,7 +235,27 @@ class _HomePageState extends State<HomePage> {
                                   child: Text(
                                     'Party neon',
                                     style: TextStyle(
-                                        fontSize: 22, color: Colors.white),
+                                        fontSize: 22,
+                                        color: ColorManager.white),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: Row(
+                                    children: [
+                                      Text('4.5',
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              color: ColorManager.white)),
+                                      SizedBox(
+                                        width: 5,
+                                      ),
+                                      Image(
+                                        fit: BoxFit.cover,
+                                        image: AssetImage(
+                                            'assets/images/star.png'),
+                                      ),
+                                    ],
                                   ),
                                 ),
                                 Padding(
@@ -246,7 +263,36 @@ class _HomePageState extends State<HomePage> {
                                   child: Text(
                                     'San Francisco',
                                     style: TextStyle(
-                                        fontSize: 16, color: Colors.grey),
+                                        fontSize: 16,
+                                        color: ColorManager.lightGrey),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: GestureDetector(
+                                    onTap: () {},
+                                    child: Container(
+                                      child: Center(
+                                        child: Text(
+                                          'Follow',
+                                          style: TextStyle(
+                                              color: ColorManager.white,
+                                              fontSize: 12,
+                                              fontFamily: 'Poppins'),
+                                        ),
+                                      ),
+                                      height: 30,
+                                      width: 79,
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                          colors: [
+                                            ColorManager.gradient,
+                                            ColorManager.purple
+                                          ],
+                                        ),
+                                        borderRadius: BorderRadius.circular(12),
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ],
@@ -278,7 +324,7 @@ class _HomePageState extends State<HomePage> {
                 height: 10,
               ),
               SizedBox(
-                height: 180,
+                height: 230,
                 width: double.infinity,
                 child: ListView.builder(
                   shrinkWrap: true,
@@ -292,107 +338,71 @@ class _HomePageState extends State<HomePage> {
                               color: ColorManager.shadeBlue2,
                               borderRadius: BorderRadius.circular(12)),
                           child: Padding(
-                            padding: EdgeInsets.all(8),
+                            padding: EdgeInsets.all(0),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               // ignore: prefer_const_literals_to_create_immutables
                               children: [
-                                Image(
-                                  fit: BoxFit.cover,
-                                  image:
-                                      AssetImage('assets/images/dummy_2.png'),
-                                  height: 80,
-                                  width: 140,
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
                                 Padding(
-                                  padding: const EdgeInsets.all(4.0),
-                                  child: Text(
-                                    'Party neon',
-                                    style: TextStyle(
-                                        fontSize: 22, color: Colors.white),
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Image(
+                                    fit: BoxFit.cover,
+                                    image:
+                                        AssetImage('assets/images/dummy_2.png'),
+                                    height: 100,
+                                    width: 165,
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.all(4.0),
-                                  child: Text(
-                                    'San Francisco',
-                                    style: TextStyle(
-                                        fontSize: 16, color: Colors.grey),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        )
-                      ],
-                    );
-                  },
-                ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                // ignore: prefer_const_literals_to_create_immutables
-                children: [
-                  Text(
-                    'Drinks',
-                    style: TextStyle(fontSize: 22, color: ColorManager.white),
-                  ),
-                  Text(
-                    'View all',
-                    style: TextStyle(fontSize: 16, color: ColorManager.purple),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              SizedBox(
-                height: 180,
-                width: double.infinity,
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: 6,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Row(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                              color: ColorManager.shadeBlue2,
-                              borderRadius: BorderRadius.circular(12)),
-                          child: Padding(
-                            padding: EdgeInsets.all(8),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Image(
-                                  fit: BoxFit.cover,
-                                  image:
-                                      AssetImage('assets/images/dummy_3.png'),
-                                  height: 80,
-                                  width: 140,
-                                ),
-                                SizedBox(
-                                  height: 10,
+                                Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 8),
+                                      child: Text(
+                                        'Party neon',
+                                        style: TextStyle(
+                                            fontSize: 22, color: Colors.white),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 16),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: ColorManager.datecolor,
+                                          borderRadius:
+                                              BorderRadius.circular(11),
+                                        ),
+                                        height: 43,
+                                        width: 40,
+                                        child: Center(
+                                          child: Column(
+                                            children: [
+                                              Text(
+                                                '1',
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontFamily: 'DM Sans',
+                                                    color: ColorManager.white),
+                                              ),
+                                              Text(
+                                                'jun',
+                                                style: TextStyle(
+                                                    fontSize: 12,
+                                                    fontFamily: 'DM Sans',
+                                                    color: ColorManager.white),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    )
+                                  ],
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.all(4.0),
-                                  child: Text(
-                                    'Party neon',
-                                    style: TextStyle(
-                                        fontSize: 22, color: Colors.white),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(4.0),
+                                  padding: const EdgeInsets.only(left: 8),
                                   child: Text(
                                     'San Francisco',
                                     style: TextStyle(
@@ -405,7 +415,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         SizedBox(
                           width: 10,
-                        )
+                        ),
                       ],
                     );
                   },

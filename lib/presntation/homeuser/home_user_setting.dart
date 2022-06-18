@@ -1,57 +1,47 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/presntation/homecreator/home_setting.dart';
+import 'package:music_app/presntation/homeuser/home_user_screen.dart';
 import 'package:music_app/presntation/resources/color_manager.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class HomeUserSetting extends StatefulWidget {
+  HomeUserSetting({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
-  }
-
-  // This widget is the root of your application.
-
+  State<HomeUserSetting> createState() => _HomeUserSettingState();
 }
 
-class MyHomePage extends StatefulWidget {
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class _HomeUserSettingState extends State<HomeUserSetting> {
   int seletedPage = 0;
   List page = [
+    HomeUserScreen(),
     HomePage(),
-    HomePage(),
-    HomePage(),
-    HomePage(),
+    HomeUserScreen(),
+    HomeUserScreen(),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: page[seletedPage],
-      floatingActionButton: GestureDetector(
-        onTap: () => print('tapped'),
-        child: Stack(
-          children: [
-            CustomPaint(
-              size: Size(50, (50 * 1).toDouble()),
-              painter: RPSCustomPainter(),
-            ),
-            Positioned(
-                bottom: 10,
-                left: 5,
-                right: 5,
-                top: 10,
-                child: Icon(
-                  Icons.add,
-                  color: Colors.white,
-                )),
-          ],
-        ),
-      ),
+      // floatingActionButton: GestureDetector(
+      //   onTap: () => print('tapped'),
+      //   child: Stack(
+      //     children: [
+      //       CustomPaint(
+      //         size: Size(50, (50 * 1).toDouble()),
+      //       ),
+      //       Positioned(
+      //           bottom: 10,
+      //           left: 5,
+      //           right: 5,
+      //           top: 10,
+      //           child: Icon(
+      //             Icons.add,
+      //             color: Colors.white,
+      //           )),
+      //     ],
+      //   ),
+      // ),
       bottomNavigationBar: buildNavBar(context),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
@@ -97,7 +87,6 @@ class _MyHomePageState extends State<MyHomePage> {
               });
             },
           ),
-          Expanded(child: Text('')),
           Expanded(
               child: InkWell(
             child: Image(
@@ -139,25 +128,25 @@ class _MyHomePageState extends State<MyHomePage> {
 //Add this CustomPaint widget to the Widget Tree
 
 //Copy this CustomPainter code to the Bottom of the File
-class RPSCustomPainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    Path path_0 = Path();
-    path_0.moveTo(size.width * 0.7500000, size.height * 0.08333333);
-    path_0.lineTo(size.width, size.height * 0.5208333);
-    path_0.lineTo(size.width * 0.7500000, size.height * 0.9583333);
-    path_0.lineTo(size.width * 0.2500000, size.height * 0.9583333);
-    path_0.lineTo(0, size.height * 0.5208333);
-    path_0.lineTo(size.width * 0.2500000, size.height * 0.08333333);
-    path_0.close();
+// class RPSCustomPainter extends CustomPainter {
+//   @override
+//   void paint(Canvas canvas, Size size) {
+//     Path path_0 = Path();
+//     path_0.moveTo(size.width * 0.7500000, size.height * 0.08333333);
+//     path_0.lineTo(size.width, size.height * 0.5208333);
+//     path_0.lineTo(size.width * 0.7500000, size.height * 0.9583333);
+//     path_0.lineTo(size.width * 0.2500000, size.height * 0.9583333);
+//     path_0.lineTo(0, size.height * 0.5208333);
+//     path_0.lineTo(size.width * 0.2500000, size.height * 0.08333333);
+//     path_0.close();
 
-    Paint paint_0_fill = Paint()..style = PaintingStyle.fill;
-    paint_0_fill.color = Colors.purple;
-    canvas.drawPath(path_0, paint_0_fill);
-  }
+//     Paint paint_0_fill = Paint()..style = PaintingStyle.fill;
+//     paint_0_fill.color = Colors.purple;
+//     canvas.drawPath(path_0, paint_0_fill);
+//   }
 
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    return true;
-  }
-}
+//   @override
+//   bool shouldRepaint(covariant CustomPainter oldDelegate) {
+//     return true;
+//   }
+// }

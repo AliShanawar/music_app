@@ -61,7 +61,6 @@ flutter:
   assets:
     - assets/images/coffe.png
     - assets/images/Star.png
-    - assets/images/Vector.png
     - assets/images/drawer_background.png
     - assets/images/logo.png
     - assets/images/dummy.png
@@ -69,6 +68,16 @@ flutter:
     - assets/images/Fill.png
     - assets/images/heart.png
     - assets/images/profile.png
+    - assets/images/music.png
+    - assets/images/dummy_2.png
+    - assets/images/dummy_3.png
+    - assets/images/round_1.png
+    - assets/images/arrow.png
+    - assets/images/chat.png
+    - assets/images/bug.png
+    - assets/images/logo_background.png
+
+    
 
     
   
