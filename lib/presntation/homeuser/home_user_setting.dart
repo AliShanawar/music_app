@@ -72,14 +72,20 @@ class _HomeUserSettingState extends State<HomeUserSetting> {
           ),
           InkWell(
             child: Expanded(
-              child: Image(
-                height: 40,
-                image: AssetImage(
-                  'assets/images/Fill.png',
-                ),
+              child: Icon(
+                Icons.calendar_month_outlined,
                 color:
                     seletedPage == 1 ? ColorManager.white : ColorManager.white,
               ),
+
+              // child: Image(
+              //   height: 40,
+              //   image: AssetImage(
+              //     'assets/images/Fill.png',
+              //   ),
+              //   color:
+              //       seletedPage == 1 ? ColorManager.white : ColorManager.white,
+              // ),
             ),
             onTap: () {
               setState(() {
