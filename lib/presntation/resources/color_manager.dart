@@ -14,6 +14,7 @@ class ColorManager {
   static Color gradient = HexColor.fromHex('#195DE3');
   static Color datecolor = HexColor.fromHex('#312773');
   static Color deepPurple = HexColor.fromHex('#312773');
+  static Color borderBackground = HexColor.fromHex('#484747');
 }
 
 extension HexColor on Color {
